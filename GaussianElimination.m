@@ -44,6 +44,20 @@ function sol = GaussianElimination(A, B)
 
         % Get A(3,2) to 0
         augmat(3,:) = augmat(3,:) - augmat(3,2)/augmat(2,2) * augmat(2,:);
+        
+        solutions = zeros(size(augmat, 1), 1);
+        
+        % Back substitution
+        for s=1:size(augmat,1)
+            z = size(augmat,1) - s + 1;
+            d = augmat(z, z);
+            a = augmat(z, length(augmat));
+            t = 0;
+            
+            for gg=size(augmat, 1):-1:1
+                
+            end
+        end
 
         % Back substitution
         zzz = augmat(3,4)/augmat(3,3);
